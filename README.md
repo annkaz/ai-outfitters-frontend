@@ -1,4 +1,5 @@
-## Getting Started
+## Project description
+Dynamically generated and styled NFT PFPs using OWL protocol
 
 ### How to run
 
