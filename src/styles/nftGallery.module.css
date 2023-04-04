@@ -1,18 +1,26 @@
 .card_container {
   background-color: #fff;
-  width: 100%;
+  width: 342px;
+  height: 410px ;
   max-height: 504px;
   border-radius: 12px;
   padding: 20px;
   border: 1px solid #CFD9F0;
 }
 
+.location_select_wrapper {
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  border:1px solid;
+}
+
 .location_select {
-  width: 100px;
-  height: 23px;
-  border-radius: 10px;
+  width:114px;
+  height:25px;
+  border:0px;
+  outline:none;
   text-align: center;
-  border: solid;
 }
 
 .info_container{
@@ -24,14 +32,15 @@
   padding: 25px 7px 13px 7px
 }
 
-/*
-.title_container {
-  display: flex;
-  align-items: center;
-  height: 2.5rem;
+.image {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
-.title_container h3 {
-  font-weight: bold;
-} */
+.image_loading {
+  height: 300px;
+  width: 300px;
+}
 
