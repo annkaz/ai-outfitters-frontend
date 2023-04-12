@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { ThirdwebNftMedia, useContract, useContractMetadata, useNFTs } from "@thirdweb-dev/react";
 import "./styles/Home.css";
 import styles from "./styles/nftGallery.module.css";
 import Web3 from 'web3';
@@ -16,6 +17,9 @@ export default function Home() {
   const [metadata, setMetadata] = useState({})
   const [loading, setLoading] = useState(true)
   const [loadingLocChange, setLoadingLocChange] = useState(true)
+
+  const { contract } = useContract('0xFC3166405Dd04a22632016c312e763818e5d595B');
+  const { data: nft, isLoading } = useNFTs(contract, 1);
 
 
   const fetchNft = useCallback(() => {
@@ -85,6 +89,7 @@ export default function Home() {
                 <img className={styles.image} src={metadata.image} alt={metadata.name}></img>
                 : (<div className={styles.image_loading}>Loading...</div>)
               }
+              {/* <ThirdwebNftMedia metadata={nft.metadata} /> */}
 
               <div className={styles.info_container}>
                 <div style={{paddingTop: 4}}>Location</div>
