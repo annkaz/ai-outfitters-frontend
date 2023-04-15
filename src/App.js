@@ -18,8 +18,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true)
   const [loadingLocChange, setLoadingLocChange] = useState(true)
 
-  const { contract } = useContract('0xFC3166405Dd04a22632016c312e763818e5d595B');
-  const { data: nft, isLoading } = useNFTs(contract, 1);
+  // const { contract } = useContract('0xFC3166405Dd04a22632016c312e763818e5d595B');
+  // const { data: nft, isLoading } = useNFTs(contract, 1);
 
 
   const fetchNft = useCallback(() => {
@@ -86,7 +86,7 @@ export default function Home() {
           (<div className={styles.card_container}>
 
               {!loadingLocChange ?
-                <img className={styles.image} src={metadata.image} alt={metadata.name}></img>
+                <img className={styles.image} src={metadata.image} alt=""></img>
                 : (<div className={styles.image_loading}>Loading...</div>)
               }
               {/* <ThirdwebNftMedia metadata={nft.metadata} /> */}
